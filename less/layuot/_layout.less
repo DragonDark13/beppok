@@ -1,0 +1,183 @@
+
+
+.header_top{
+	.clearfix;
+	background: @theme_color_1;
+	padding: 18px 19px 18px 40px;
+    border-bottom: 2px solid @colorWhite;
+
+	@logo_w: 40%;
+	@meni_w: 100% - @logo_w;
+
+	&>*{
+		float: left;
+	}
+
+	.logo{
+		width: @logo_w;
+
+		&>*{
+		display: inline-block;
+		}
+
+		span{
+		.font_mixin(50px, bold,@colorWhite, @header_font_fam);
+		line-height: 1.2;
+		letter-spacing: 18px;
+	    padding-left: 19px;
+		}
+
+	}
+
+
+	.main_meni{
+		width: @meni_w;
+		.clearfix;
+		padding-top: 10px;
+	}
+
+}
+
+
+.slider{
+background-color: @theme_color_2;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff5346+15,1b2024+100&0.85+0,0.5+100 */
+background: -moz-linear-gradient(top,  rgba(255,83,70,0.85) 0%, rgba(255,83,70,0.8) 15%, rgba(27,32,36,0.5) 100%) @theme_color_2; /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(255,83,70,0.85) 0%,rgba(255,83,70,0.8) 15%,rgba(27,32,36,0.5) 100%) @theme_color_2; /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(255,83,70,0.85) 0%,rgba(255,83,70,0.8) 15%,rgba(27,32,36,0.5) 100%) @theme_color_2; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9ff5346', endColorstr='#801b2024',GradientType=0 ); /* IE6-9 */
+.box-shadow( 3px -3px 7px 0px fade( @colorBlack ,30% ) inset);
+// height: 300px;
+width: 100%;
+padding-top: 20px;
+padding-bottom: 1px;
+}
+
+ .bx-wrapper{
+    	margin-bottom: 18px;
+    	border: none;
+    	.box-shadow(0px 0px 7px 0px  fade( @colorBlack , 75%));
+
+    	 .bx-pager{
+    	 	bottom: -44px;
+    	 }
+
+    	 .bx-pager.bx-default-pager a{
+    	 	margin: 0 10px;
+    	 	background-color: #81aa21;
+    	 	.box-shadow(0px 0px 5px 0px  fade( @colorBlack , 75%) inset);
+    	 }
+
+		.bx-pager.bx-default-pager a.active{
+		background-color: @theme_color_1;
+		}
+
+		.bx-controls-direction a{
+		border-radius: 50%;
+		background-color:  fade( @colorWhite ,10% );
+		background-repeat: no-repeat;
+		background-position: center center;
+		width: 50px;
+		height: 50px;
+	    top: 47%;
+	    .transition;
+	    z-index: 99;
+
+		    &:hover{
+			background-color: fade( @colorWhite ,90% );
+			background-position: center center;
+		    }
+		}
+
+
+
+		@arrow_pos: -14.5%;
+
+		.bx-prev{
+		left: @arrow_pos;
+		background-image:  url(../images/arrow_slider_left.png) ;
+		}
+
+		.bx-next{
+		right: @arrow_pos;
+		background-image:  url(../images/arrow_slider_right.png) ;
+		}
+
+		 img {
+		 	width: 100%;
+		 }
+    }
+
+
+
+#main_container{
+	padding: 40px 109px 20px  ;
+	background-color: @colorWhite;
+	.clearfix;
+}
+
+@main_content_w: 67.3%;
+@right_sidebar_w: 26.9%;
+@margin_left_sidebar: 100% - (  @main_content_w + @right_sidebar_w);
+
+#main_content,
+#right_sidebar{
+	float: left;
+}
+
+#main_content{
+width: @main_content_w;
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d7d7d7+0,ffffff+100 */
+background: rgb(215,215,215); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(215,215,215,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(215,215,215,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(215,215,215,1) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7d7d7', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+.box-shadow( 0px 0px 1px 0px fade( @colorBlack ,76% ));
+
+}
+
+#right_sidebar{
+	width: @right_sidebar_w;
+	margin-left: @margin_left_sidebar;
+}
+
+footer{
+	background-color: #212125;
+}
+
+#footer_top,
+#footer_bottom{
+	.clearfix;
+}
+
+#footer_top{
+	padding: 17px 1.5% 30px ;
+	border-bottom: 1px solid @colorWhite;
+	.clearfix;
+}
+
+#footer_bottom{
+	background-color: @theme_color_1;
+}
+
+.soc_part,
+.copy_part{
+	float: left;
+	width: 50%;
+}
+
+.soc_part{
+	padding: 17px 41px;
+}
+
+.copy_part{
+	padding: 17px 39px;
+	text-align: right;
+
+	p{
+		font-family: @header_font_fam;
+		color: @colorWhite
+	}
+}

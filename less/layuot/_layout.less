@@ -6,12 +6,14 @@
 	padding: 18px 19px 18px 40px;
     border-bottom: 2px solid @colorWhite;
 
-	@logo_w: 40%;
-	@meni_w: 100% - @logo_w;
-
 	&>*{
 		float: left;
 	}
+
+}
+
+	@logo_w: 40%;
+	@meni_w: 100% - @logo_w;
 
 	.logo{
 		width: @logo_w;
@@ -34,9 +36,14 @@
 		width: @meni_w;
 		.clearfix;
 		padding-top: 10px;
+		display: block;
+		text-align: right;
+
+		&_header{
+			display: none;
+		}
 	}
 
-}
 
 
 .slider{
@@ -85,6 +92,11 @@ padding-bottom: 1px;
 
 		    &:hover{
 			background-color: fade( @colorWhite ,90% );
+		    }
+
+
+		    &:focus,
+		    &:hover{
 			background-position: center center;
 		    }
 		}
@@ -94,13 +106,24 @@ padding-bottom: 1px;
 		@arrow_pos: -14.5%;
 
 		.bx-prev{
+
+			&
+			{
+			background-image:  url(../images/arrow_slider_left.png) ;
+			// background-position: center center;
+			}
+
 		left: @arrow_pos;
-		background-image:  url(../images/arrow_slider_left.png) ;
 		}
 
 		.bx-next{
 		right: @arrow_pos;
-		background-image:  url(../images/arrow_slider_right.png) ;
+
+			&,
+			&:hover{
+			background-image:  url(../images/arrow_slider_right.png) ;
+			}
+
 		}
 
 		 img {
@@ -181,3 +204,113 @@ footer{
 		color: @colorWhite
 	}
 }
+
+.media_min(1009, {
+
+	#main_content,
+	#right_sidebar{
+	width: 100%;
+	float: none;
+	}
+
+	#right_sidebar{
+	margin-left: 0px;
+	}
+
+	#main_content{
+		margin-bottom: 20px;
+	}
+});
+
+.media_min(978, {
+
+	.main_meni,
+	.logo{
+		float: none;
+		width: 100%;
+	}
+
+	div.main_meni,
+	.logo{
+		text-align: center;
+	}
+
+	.header_top{
+		padding: 18px 19px 30px;
+	}
+
+});
+
+
+.media_min(820, {
+
+	.bx-wrapper .bx-{
+
+		&prev{
+			left: 0px;
+		}
+
+		&next{
+			right: 0px;
+		}
+	}
+});
+
+.media_min(804, {
+
+	#main_container{
+		padding: 40px 3% 20px;
+	}
+
+});
+
+
+.media_min(748, {
+
+	#footer_bottom{
+		padding-top: 10px;
+		padding-bottom: 5px;
+	}
+
+	.soc_part,
+	.copy_part{
+		float: none;
+		width: 100%;
+		text-align: center;
+		padding: 8px  30px;
+	}
+
+});
+
+
+.media_min(625, {
+
+	.header_top{
+		padding: 18px 0px 0px;
+		border-bottom: none;
+	}
+
+	.main_meni{
+		border-bottom: 1px solid @colorWhite;
+
+		&_header{
+		display: block;
+		padding: 10px 32px;
+		text-align: right;
+
+			i{
+			color: @colorWhite;
+			cursor: pointer;
+			}
+
+			i:hover{
+				.hvr-pulse;
+			}
+		}
+
+		.meni{
+			display: none;
+		}
+	}
+
+});
